@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <title>your name-Portfolio</title>
+    <style>
+        body{
+            font-family:arial,sans-serif;
+            margin:0;
+            padding:0;
+            background-color:pink;
+        }
+        header{
+            background-color:peachpuff;
+            color:purple;
+            text-align: center;
+            padding:2rem 0;
+            position:relative;/*add this*/
+        }
+     .header-content h1{
+        font-size:2.5rem;https://github.com/githubbanu/digital-portfolio/upload/master 
+     }
+     /*add styles for the round proile picture*/
+     .profile-picture{
+        width:150px;/*adjust the size as needed*/ 
+        height:150px;
+        border-radius:75%;/*create a circular shape*/
+        object-fit:contain;/*to ensure the images fill in the circular area*/
+        position:absolute;/*add this*/ 
+        top:10px;/*adjust top position as needed*/
+        left:75px;
+     }
+     nav{
+        background-color:orange;
+        color:green;
+        text-align:center;
+     }
+     nav ul{
+        list-style-type:none;
+        padding:0;
+     }
+     nav ul li{
+        display:inline;
+        margin: 0 20px;
+     }
+     nav ul li a{
+        text-decoration:none;
+        color:red;
+     }
+     .section-content{
+        background-color:skyblue;
+        padding:2rem;
+        margin:1rem;
+        border-radius:20px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+        text-align:justify;
+     }
+     .download button{
+        background-color:whitesmoke;
+        color:whitesmoke;
+        padding:0.5rem 1rem;
+        text-decoration:none;
+        border-radius:20px;
+        display:inline-block;
+        margin-top:10px;
+        align-self:center;
+     }
+     .download-button:hover{
+        background-color:brown;
+     }
+     footer{
+        text-align:top;
+        padding:1rem 0;
+        background-color:lavenderblush;
+        color:lavenderblush;
+     }
+     ul{
+        list-style-type:disc;
+        padding-left:20px;
+     }
+     </style>
+     </head>
+     <header>
+        <div class="header-content">
+            <!--add your profile picture here-->
+            <img src="./banu.jpg" alt="your profile picture" class="profile-picture">
+                <h1>BANUPRIYA M</h1>
+                <p>EXPERT IN DEBUGGING</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                    <li><a href="#resume">RESUME</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#education">EDUCATION</a></li>
+            </ul>
+            <nav>
+                <section id="about">
+                    <div class="section-content">
+                    <h2>About Me</h2>
+                    <p>I ama a Debugger.I am more intrested to find the debugs and I am able to solve any problems in the program.</p>
+                </div>
+                    </section>
+                    <section id="skills">
+                        <div class="section-content">
+                            <h2>skills</h2>
+                            <ul>
+                                <li>Debugging</li>
+                                <li>Website developing</li>
+                                <li>cloud computing</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section  id="Education">
+                        <div class="section-content">
+                            <h2>Education</h2>
+                     <p>Alagappa University-BSC Computer Science</p>
+                     </div>
+                    </section>
+                    <section id="projects">
+                        <div class="section-content">
+                            <h2>Projects</h2>
+                            <ul>
+                                <li><a href="#">Cloud Deployement</a></li>
+                                <li><a href="#">Building Website</a></li>
+                                <!--add more Projects links here-->
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="resume">
+                        <div class="section-content">
+                            <center>
+                 <a href="c:\Users\admin\Downloads\Bio data.docx" target="_blank" class="download-button">Download CV</a>
+                            </center>
+                        </div>
+                    </section>
+                    <footer>
+                        <p> &copy; 2023 BANUPRIYA M</p>
+                    </footer>
+                    <script>
+                        //smmoth scrolling to section when clicking on navigation links 
+                        document.queryselectorAll('a[href^"#"]').foreach(anchor=>{
+                            anchor.addEventListener('click',function(e){
+                                e.preventDefault();
+                                const targetId=this.getAttribute('href').substring(1);
+                                const targetElement=document.getElementByid(targetid);
+                                if(targetElement){
+                                    window.scrollTo({
+                                        top: targetElement.offsettop,
+                                        behavior:'smooth'
+                                    });
+                                }
+                            });
+                        });
+                </script>
+                </body>
+                </nav>
+                </html>
